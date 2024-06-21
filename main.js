@@ -1,10 +1,10 @@
 // script.js 
+
 const passwordInput = document.getElementById("password");
 const power = document.getElementById("power-point");
-const generateButton = document.getElementById("button");
-
-const widthPower = ["25%", "50%", "75%", "100%"];
-const colorPower = ["#DC6551", "#F2B84F", "#BDE952", "#3ba62f"];
+const generateButton = document.getElementById("generate-button");
+const widthPower = ["1","25%", "50%", "75%", "100%"];
+const colorPower = ["#D73F40","#DC6551", "#F2B84F", "#BDE952", "#3ba62f"];
 
 function generateCustomPassword(length) {
     const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+-=[]{}|;:,.<>?';
@@ -42,4 +42,5 @@ generateButton.onclick = () => {
     const generatedPassword = generateCustomPassword(16);
     passwordInput.value = generatedPassword;
     checkPasswordStrength(generatedPassword);
+    alert('Successfully generated!');
 };
